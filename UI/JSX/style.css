@@ -1,0 +1,129 @@
+.nav-container {
+  background-color: lightblue;
+  padding: 10px;
+}
+
+.nav-item {
+  display: inline;
+  margin-right: 10px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: black;
+}
+
+.form-container {
+  width: 50%;
+  margin: auto;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.back-link {
+  display: block;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.input-style {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.button-style {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 15px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Define table styles */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border: 2px solid #ddd;
+}
+
+/* Define table header styles */
+.table-header {
+  padding: 100px; 
+  text-align: center;
+  border: 1px solid #ddd;
+  border-bottom: 2px solid #ddd;
+  border-right: 1px solid #ddd;
+}
+
+/* Define table cell styles */
+.table-cell {
+  padding: 8px;
+  text-align: center;
+  border: 2px solid #ddd;
+  border-bottom: 2px solid #ddd;
+  border-right: 1px solid #ddd;
+}
+
+/* Define additional styles for select and button */
+.filter-container {
+  margin-bottom: 10px;
+}
+
+/* Define styles for buttons */
+.button {
+  padding: 8px 16px;
+  background-color: #6fa8dc; 
+  border: 1px solid #6fa8dc; 
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-right: 8px; 
+}
+
+.button:last-child {
+  margin-right: 0; 
+}
+
+.button:hover {
+  background-color: #81a5d6; 
+  border-color: #4b89dc;
+}
+
+.back-button-container .back-button.custom-color {
+  background-color: #ff5733;
+  border-color: #ff5733;
+  color: white;
+  position: fixed;
+  right: 20px;
+}
+
+.back-button-container .back-button.custom-color:hover {
+  background-color: #d83200;
+  border-color: #d83200;
+}
+
+.custom-navbar {
+  background-color: #43565b; /* Change the background color */
+}
+
+.custom-nav-link {
+  color: #c4afb5; /* Change the link color */
+}
+
+.custom-nav-link:hover {
+  color: #c09595; /* Change the link color on hover */
+}
