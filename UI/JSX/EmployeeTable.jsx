@@ -50,6 +50,8 @@ const EmployeeTable = ({ employeesData,searchResults,searchResultsByType }) => {
               }
             }
           `,
+
+
         }),
       })
 
@@ -59,6 +61,8 @@ const EmployeeTable = ({ employeesData,searchResults,searchResultsByType }) => {
       }
 
       setEmployees(data.getEmployees);
+      console.log("Fetched employees:", data.getEmployees);
+
     } catch (error) {
       console.error("Error fetching employees:", error);
     }

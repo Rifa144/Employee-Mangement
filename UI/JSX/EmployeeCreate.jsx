@@ -17,6 +17,7 @@ const EmployeeCreate = ({ fetchEmployees }) => { // Use destructuring to receive
     error: null,
     employees: [],
     formErrors: {}, // to track errors for each field
+    successMessage: "", // to track success message
   });
 
   const handleInputChange = (event) => {
@@ -94,6 +95,7 @@ const EmployeeCreate = ({ fetchEmployees }) => { // Use destructuring to receive
         error: null,
         employees: [],
         formErrors: {}, // Reset form errors
+        successMessage: "Employee successfully added!", // Set success message
       });
       fetchEmployees();
 
@@ -169,12 +171,20 @@ const EmployeeCreate = ({ fetchEmployees }) => { // Use destructuring to receive
     employeeType,
     currentStatus,
     formErrors,
+    successMessage,
   } = formData;
 
   return (
     <div className="form-container">
       <h2>Create Employee</h2>
-      
+
+      {/* Success message */}
+      {successMessage && (
+        <div style={{ color: "green", marginBottom: "20px" }}>
+          {successMessage}
+        </div>
+      )}
+
       <Form className="form" onSubmit={handleSubmit}>
         <Form.Group controlId="firstName">
           <Form.Label>First Name:</Form.Label>
@@ -272,11 +282,10 @@ const EmployeeCreate = ({ fetchEmployees }) => { // Use destructuring to receive
             value={employeeType}
             onChange={handleInputChange}
           >
-            <option value="">Select Employee Type</option>
-            <option value="FullTime">FullTime</option>
-            <option value="PartTime">PartTime</option>
+            <option value="">Select</option>
+            <option value="Full-Time">Full-Time</option>
+            <option value="Part-Time">Part-Time</option>
             <option value="Contract">Contract</option>
-            <option value="Seasonal">Seasonal</option>
           </Form.Control>
         </Form.Group>
 
@@ -288,17 +297,14 @@ const EmployeeCreate = ({ fetchEmployees }) => { // Use destructuring to receive
             value={currentStatus}
             onChange={handleInputChange}
           >
-            <option value={true}>Working</option>
-            <option value={false}>Retired</option>
+            <option value="true">Working</option>
+            <option value="false">Retired</option>
           </Form.Control>
         </Form.Group>
 
-        <Button type="submit" className="button-style">
-          Create Employee
+        <Button variant="primary" type="submit">
+          Add Employee
         </Button>
-        <Link to="/" className="back-link">
-        Back
-      </Link>
       </Form>
     </div>
   );

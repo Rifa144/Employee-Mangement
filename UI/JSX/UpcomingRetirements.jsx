@@ -122,7 +122,7 @@ function UpcomingRetirements({ employees }) {
   };
 
   const handleBackButtonClick = () => {
-    history.push("/"); // Navigate back to the main page
+    history.push("/"); 
   };
 
   if (loading) {

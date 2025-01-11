@@ -1,0 +1,41 @@
+{
+  "name": "browserify-node",
+  "version": "0.0.1",
+  "author": {
+    "name": "Efremov Alex",
+    "email": "lexich121@gmail.com",
+    "url": "https://github.com/lexich"
+  },
+  "description": "",
+  "repository": "http://github.com/lexich/browserify-node",
+  "scripts": {
+    "test": "npm run clean && npm run jscs && npm run eslint && node_modules/.bin/gulp test",
+    "coveralls": "npm test && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && npm run clean",
+    "clean": "rm -rf ./coverage",
+    "jscs": "node_modules/.bin/jscs gulpfile.js index.js lib",
+    "eslint": "node_modules/.bin/eslint gulpfile.js index.js lib",
+    "precommit": "npm test",
+    "prepush": "npm test",
+    "postmerge": "npm install"
+  },
+  "dependencies": {
+    "through": "^2.3.7"
+  },
+  "devDependencies": {
+    "babel-eslint": "^3.0.1",
+    "chai": "^2.3.0",
+    "coveralls": "^2.11.2",
+    "eslint": "^0.21.2",
+    "gulp": "^3.8.11",
+    "gulp-istanbul": "^0.9.0",
+    "gulp-mocha": "^2.0.1",
+    "husky": "^0.8.1",
+    "istanbul": "*",
+    "jscs": "^1.13.1",
+    "mocha": "^2.2.4",
+    "mocha-lcov-reporter": "0.0.2"
+  },
+  "engines": {
+    "node": ">=0.12.0"
+  }
+}
