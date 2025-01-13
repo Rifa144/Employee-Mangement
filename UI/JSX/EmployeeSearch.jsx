@@ -135,10 +135,13 @@ const EmployeeSearch = ({ onSearchResults, onEmployeeTypeFilterChange, onSearchB
   
   return (
     <>
-      <div style={{ display: "flex", marginBottom: "10px", padding: "8px 16px" }}>
+  
+      <div style={{ display: "flex", marginBottom: "10px", padding: "8px 16px", justifyContent: 'center'}}>
         {/* Search by name input */}
         <div style={{ marginRight: "10px" }}>
+          <label className="input-style2"></label>
           <input
+          className="searchInput"
             type="text"
             placeholder="Search by name"
             value={searchQueryByName}
@@ -155,24 +158,28 @@ const EmployeeSearch = ({ onSearchResults, onEmployeeTypeFilterChange, onSearchB
 
         {/* Filter by employee type select */}
         <div className="filter-container">
-          <label>
+        
+          <label className="input-style2">
             Filter by Employee Type:
             <select onChange={handleEmployeeTypeChange}>
               <option value="All">All</option>
-              <option value="FullTime">Full Time</option>
-              <option value="PartTime">Part Time</option>
+              <option value="Full-Time">Full Time</option>
+              <option value="Part-Time">Part Time</option>
               <option value="Contract">Contract</option>
               <option value="Seasonal">Seasonal</option>
             </select>
-          </label>
+        
           
           <Button variant="outline-info" 
           style={{ cursor: "pointer", marginLeft: "10px", padding: "8px 16px" }}
           onClick={handleSearchButtonClick}>
             Search
           </Button>
+          </label>
         </div>
+        
       </div>
+
     </>
   );
 };

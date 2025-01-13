@@ -12,70 +12,120 @@
   text-decoration: none;
   color: black;
 }
-
 .form-container {
-  width: 50%;
-  margin: auto;
+  margin: 20px auto;
   padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px; /* Controls the width of the form */
+ border: 1px solid black
 }
 
-.back-link {
-  display: block;
-  margin-bottom: 10px;
+.form-container h2 {
+  margin-bottom: 20px;
   text-align: center;
+  color: #333;
+  font-size: 1.5rem;
 }
 
 .form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px; /* Adds space between fields */
 }
 
 .input-style {
-  width: 100%;
-  padding: 10px;
-  margin: 5px 0;
-  box-sizing: border-box;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+  color: #000000;
 }
 
-.button-style {
-  background-color: #4caf50;
-  color: white;
-  padding: 10px 15px;
-  margin: 10px 0;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+.input-style2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  color: #000000;
+ margin-left: 30px;
 }
+
+.input-style3 {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  color: #000000;
+}
+
+.searchInput{
+  padding: 8px;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  font-size: 1rem;
+  margin-top: 5px;
+  transition: border-color 0.3s ease;
+}
+
+.input-style2 select {
+  padding: 8px;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  font-size: 1rem;
+  margin-top: 5px;
+  transition: border-color 0.3s ease;
+  margin-left:10px;
+}
+.input-style3 select {
+  padding: 8px;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  font-size: 1rem;
+  margin-top: 5px;
+  transition: border-color 0.3s ease;
+  margin-left:10px;
+}
+
+.input-style select {
+  padding: 8px;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  font-size: 1rem;
+  margin-top: 5px;
+  transition: border-color 0.3s ease;
+}
+
+.input-style select:focus {
+  border-color: #050505; /* Blue outline on focus */
+  outline: none;
+}
+
+
+
 
 /* Define table styles */
 .table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 10px;
-  border: 2px solid #ddd;
+  border: 1px solid #000000 !important;
+ 
+
 }
 
 /* Define table header styles */
-.table-header {
-  padding: 100px; 
+.table th {
+  background-color: #101010 !important;
+  color: white !important;
   text-align: center;
-  border: 1px solid #ddd;
-  border-bottom: 2px solid #ddd;
-  border-right: 1px solid #ddd;
+  padding: 15px 10px !important;
+  font-weight: normal;
+  
 }
 
 /* Define table cell styles */
-.table-cell {
+.table td {
   padding: 8px;
   text-align: center;
-  border: 2px solid #ddd;
-  border-bottom: 2px solid #ddd;
-  border-right: 1px solid #ddd;
+
+  
 }
 
 /* Define additional styles for select and button */
@@ -107,7 +157,6 @@
   background-color: #ff5733;
   border-color: #ff5733;
   color: white;
-  position: fixed;
   right: 20px;
 }
 
@@ -118,12 +167,29 @@
 
 .custom-navbar {
   background-color: #43565b; /* Change the background color */
+  color:red
 }
 
 .custom-nav-link {
-  color: #c4afb5; /* Change the link color */
+  color: #cfcfcf !important/* Change the link color */
 }
 
 .custom-nav-link:hover {
-  color: #c09595; /* Change the link color on hover */
+  color: #ffffff !important /* Change the link color on hover */
 }
+.btn-light:hover {
+  text-decoration: underline; 
+  background-color: #f8f9fa !important; 
+  border-color: #f8f9fa !important; 
+}
+
+
+#form-control-custom {
+  border: 1px solid #333;
+  border-radius: 5px;
+}
+
+
+
+
+

@@ -255,10 +255,10 @@ const EmployeeTable = ({ employeesData,searchResults,searchResultsByType }) => {
   
   
   return (
-    <div>
-      <Table striped bordered hover className="table">
-        <thead>
-          <tr className="table-header" style={{ background: "#ADD8E6" }}>
+    <div className="container">
+      <Table className="table">
+        <thead >
+          <tr className="table-header">
             <th>ID</th>
             <th>First Name</th>
             <th>Last Name</th>
@@ -355,57 +355,57 @@ const EmployeeTable = ({ employeesData,searchResults,searchResultsByType }) => {
         </Modal.Footer>
       </Modal>
 
-      {showModifyForm && (
-        <div className="form-container">
-          <h2>Modify Employee</h2>
-          
-          <form className="form" onSubmit={handleModifySubmit}>
-            <label className="input-style">
-              Title: 
-              <select
-                name="title"
-                value={modificationFields.title}
-                onChange={handleFieldChange}
-              >
-                <option value="Employee">Employee</option>
-                <option value="Manager">Manager</option>
-                <option value="Director">Director</option>
-                <option value="VP">VP</option>
-              </select>
-            </label>
-            <label className="input-style">
-              Department:
-              <select
-                name="department"
-                value={modificationFields.department}
-                onChange={handleFieldChange}
-              >
-                <option value="IT">IT</option>
-                <option value="Marketing">Marketing</option>
-                <option value="HR">HR</option>
-                <option value="Engineering">Engineering</option>
-              </select>
-            </label>
-            <label className="input-style">
-              Current Status:
-              <select
-                name="currentStatus"
-                value={modificationFields.currentStatus ? "true" : "false"}
-                onChange={handleFieldChange}
-              >
-                <option value="true">Working</option>
-                <option value="false">Retired</option>
-              </select>
-            </label>
-            <button type="submit" className="button-style">
-              Submit
-            </button>
-            <Link to="/" className="back-link">
-            Back
-          </Link>
-          </form>
-        </div>
-      )}
+     {showModifyForm && (
+  <div className="form-container">
+    <h2>Modify Employee</h2>
+    <form className="form" onSubmit={handleModifySubmit}>
+      <label className="input-style">
+        Title: 
+        <select
+          name="title"
+          value={modificationFields.title}
+          onChange={handleFieldChange}
+        >
+          <option value="Employee">Employee</option>
+          <option value="Manager">Manager</option>
+          <option value="Director">Director</option>
+          <option value="VP">VP</option>
+        </select>
+      </label>
+      <label className="input-style">
+        Department:
+        <select
+          name="department"
+          value={modificationFields.department}
+          onChange={handleFieldChange}
+        >
+          <option value="IT">IT</option>
+          <option value="Marketing">Marketing</option>
+          <option value="HR">HR</option>
+          <option value="Engineering">Engineering</option>
+        </select>
+      </label>
+      <label className="input-style">
+        Current Status:
+        <select
+          name="currentStatus"
+          value={modificationFields.currentStatus ? "true" : "false"}
+          onChange={handleFieldChange}
+        >
+          <option value="true">Working</option>
+          <option value="false">Retired</option>
+        </select>
+      </label>
+      <button type="submit" className="btn btn-info">
+        Submit
+      </button>
+      <Link to="/" className="btn btn-light">
+        Back
+      </Link>
+    </form>
+  </div>
+)}
+
     </div>
   );
 };

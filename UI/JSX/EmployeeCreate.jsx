@@ -176,7 +176,7 @@ const EmployeeCreate = ({ fetchEmployees }) => { // Use destructuring to receive
 
   return (
     <div className="form-container">
-      <h2>Create Employee</h2>
+      <h2 className="text-center">CREATE EMPLOYEE</h2>
 
       {/* Success message */}
       {successMessage && (
@@ -194,6 +194,7 @@ const EmployeeCreate = ({ fetchEmployees }) => { // Use destructuring to receive
             value={firstName}
             className={formErrors.firstName ? "form-control is-invalid" : "form-control"}
             onChange={handleInputChange}
+            id="form-control-custom"
           />
           {formErrors.firstName && (
             <Alert variant="danger">{formErrors.firstName}</Alert>
@@ -208,6 +209,7 @@ const EmployeeCreate = ({ fetchEmployees }) => { // Use destructuring to receive
             value={lastName}
             className={formErrors.lastName ? "form-control is-invalid" : "form-control"}
             onChange={handleInputChange}
+            id="form-control-custom"
           />
           {formErrors.lastName && (
             <Alert variant="danger">{formErrors.lastName}</Alert>
@@ -224,6 +226,7 @@ const EmployeeCreate = ({ fetchEmployees }) => { // Use destructuring to receive
             max="70"
             className={formErrors.age ? "form-control is-invalid" : "form-control"}
             onChange={handleInputChange}
+            id="form-control-custom"
           />
           {formErrors.age && (
             <Alert variant="danger">{formErrors.age}</Alert>
@@ -238,6 +241,7 @@ const EmployeeCreate = ({ fetchEmployees }) => { // Use destructuring to receive
             value={dateOfJoining}
             className={formErrors.dateOfJoining ? "form-control is-invalid" : "form-control"}
             onChange={handleInputChange}
+            id="form-control-custom"
           />
           {formErrors.dateOfJoining && (
             <Alert variant="danger">{formErrors.dateOfJoining}</Alert>
@@ -251,6 +255,7 @@ const EmployeeCreate = ({ fetchEmployees }) => { // Use destructuring to receive
             name="title"
             value={title}
             onChange={handleInputChange}
+      id="form-control-custom"
           >
             <option value="Employee">Employee</option>
             <option value="Manager">Manager</option>
@@ -266,6 +271,7 @@ const EmployeeCreate = ({ fetchEmployees }) => { // Use destructuring to receive
             name="department"
             value={department}
             onChange={handleInputChange}
+            id="form-control-custom"
           >
             <option value="IT">IT</option>
             <option value="Marketing">Marketing</option>
@@ -281,6 +287,7 @@ const EmployeeCreate = ({ fetchEmployees }) => { // Use destructuring to receive
             name="employeeType"
             value={employeeType}
             onChange={handleInputChange}
+            id="form-control-custom"
           >
             <option value="">Select</option>
             <option value="Full-Time">Full-Time</option>
@@ -296,13 +303,14 @@ const EmployeeCreate = ({ fetchEmployees }) => { // Use destructuring to receive
             name="currentStatus"
             value={currentStatus}
             onChange={handleInputChange}
+            id="form-control-custom"
           >
             <option value="true">Working</option>
             <option value="false">Retired</option>
           </Form.Control>
         </Form.Group>
 
-        <Button variant="primary" type="submit">
+        <Button className="btn btn-info" type="submit">
           Add Employee
         </Button>
       </Form>

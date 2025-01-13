@@ -133,10 +133,10 @@ function UpcomingRetirements({ employees }) {
   const hasUpcomingRetirees = upcomingRetirees.length > 0;
 
   return (
-    <div>
-      <h2>Upcoming Retirement (Next 6 Months)</h2>
+    <div className="container"> 
+      <h2 className="mt-4 mb-4">Upcoming Retirement (Next 6 Months)</h2>
       <div>
-        <label htmlFor="employeeTypeFilter">Filter by Employee Type:</label>
+        <label className="input-style3" htmlFor="employeeTypeFilter">Filter by Employee Type:
         <select
           id="employeeTypeFilter"
           value={employeeTypeFilter}
@@ -147,6 +147,7 @@ function UpcomingRetirements({ employees }) {
           <option value="PartTime">Part-time</option>
           <option value="Contract">Contract</option>
         </select>
+        </label>
       </div>
       {!hasUpcomingRetirees && (
         <p>
@@ -156,7 +157,7 @@ function UpcomingRetirements({ employees }) {
       )}
       {hasUpcomingRetirees && (
         <>
-          <Table striped bordered hover>
+          <Table>
             <thead>
               <tr>
                 <th>Employee ID</th>

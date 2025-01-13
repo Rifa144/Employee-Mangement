@@ -88,9 +88,9 @@ function EmployeeDetails() {
   const remainingTime = calculateTimeUntilRetirement(retirementDate);
 
   return (
-    <div>
-      <h2 className="my-4">Employee Details</h2>
-      <Table striped bordered hover>
+    <div className="container">
+      <h3 className="my-4 text-center">Employee Details</h3>
+      <Table>
         <thead>
           <tr>
             <th>Employee ID</th>
